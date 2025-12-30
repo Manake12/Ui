@@ -374,7 +374,7 @@ local Compkiller = {
 
 Compkiller.Colors = {
 	Highlight = Color3.fromRGB(170, 136, 63),
-	Toggle = Color3.fromRGB(14, 203, 213),
+	Toggle = Color3.fromRGB(170, 136, 63),
 	Risky = Color3.fromRGB(251, 255, 39),
 	BGDBColor = Color3.fromRGB(22, 24, 29),
 	BlockColor = Color3.fromRGB(28, 29, 34),
@@ -5077,16 +5077,16 @@ function Compkiller:_LoadElement(Parent: Frame , EnabledLine: boolean , Signal ,
 			return TextLabel.Text;
 		end;
 
-        function Args:Destroy()
-            if Args.Signal then
-                Args.Signal:Disconnect()
-            end
+		function Args:Destroy()
+			if Args.Signal then
+				Args.Signal:Disconnect()
+			end
 
-            if Button then
-                Button:Destroy()
-            end
-        end
-        
+			if Button then
+				Button:Destroy()
+			end
+		end
+
 		return Args;
 	end;
 
@@ -5578,15 +5578,15 @@ function Compkiller:_LoadElement(Parent: Frame , EnabledLine: boolean , Signal ,
 			end;
 		end);
 
-        function Args:Destroy()
-            if Args.Signal then
-                Args.Signal:Disconnect()
-            end
+		function Args:Destroy()
+			if Args.Signal then
+				Args.Signal:Disconnect()
+			end
 
-            if Paragraph then
-                Paragraph:Destroy()
-            end
-        end;
+			if Paragraph then
+				Paragraph:Destroy()
+			end
+		end;
 
 		return Args;
 	end;
@@ -6473,16 +6473,16 @@ function Compkiller.new(Config : Window)
 	CompLogo.Position = UDim2.new(0, 9, 0, 7)
 	CompLogo.Size = UDim2.new(0, 45, 0, 45)
 	CompLogo.Image = Config.Logo
-	
+
 	if Compkiller.CustomHighlightMode then
 		CompLogo.ImageColor3 = Compkiller.Colors.Highlight;
-		
+
 		table.insert(Compkiller.Elements.Highlight , {
 			Element = CompLogo,
 			Property = 'ImageColor3'
 		});
 	end;
-	
+
 	WindowLabel.Name = Compkiller:_RandomString()
 	WindowLabel.Parent = TabFrame
 	WindowLabel.BackgroundTransparency = 1.000
@@ -9688,7 +9688,7 @@ function Compkiller.new(Config : Window)
 			CompLogo.SizeConstraint = Enum.SizeConstraint.RelativeYY
 			CompLogo.ZIndex = 159
 			CompLogo.Image = Config.Logo
-			
+
 			if Compkiller.CustomHighlightMode then
 				CompLogo.ImageColor3 = Compkiller.Colors.Highlight;
 
@@ -10497,7 +10497,7 @@ function Compkiller.newNotify()
 			if Compkiller.CustomHighlightMode then
 				CompLogo.ImageColor3 = Compkiller.Colors.Highlight;
 			end;
-			
+
 			Header.Name = Compkiller:_RandomString()
 			Header.Parent = NotifyFrame
 			Header.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
