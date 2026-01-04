@@ -6404,7 +6404,7 @@ function Compkiller.new(Config : Window)
 	table.insert(Compkiller.Windows , CompKiller);
 
 	MainFrame.Active = true;
-	MainFrame.Name = Compkiller:_RandomString()
+	MainFrame.Name = "MainFrame"
 	MainFrame.Parent = CompKiller
 	MainFrame.AnchorPoint = Vector2.new(0.5, 0.5)
 	MainFrame.BackgroundColor3 = Compkiller.Colors.BGDBColor
