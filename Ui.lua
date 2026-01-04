@@ -5825,6 +5825,12 @@ function Compkiller:_LoadElement(Parent: Frame , EnabledLine: boolean , Signal ,
 			return Config.Default;
 		end;
 
+		function Args:Destroy()
+			if TextBox then
+				TextBox:Destroy()
+			end
+		end;
+
 		if Config.Flag then
 			Compkiller.Flags[Config.Flag] = Args;
 		end;
