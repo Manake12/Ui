@@ -9586,7 +9586,7 @@ function Compkiller.new(Config : Window)
 		ImageLabel.ImageTransparency = 1
 		ImageLabel.ClipsDescendants = false;
 
-		local ToggleCloseUI = function(v)
+		function Compkiller:ToggleCloseUI(v)
 			ImageLabel.Image = Config.Logo;
 
 			if v then
@@ -9859,7 +9859,7 @@ function Compkiller.new(Config : Window)
 		table.insert(WindowArgs.THREADS,task.spawn(function()
 			while true do task.wait(0.15)
 				if Compkiller:_IsMobile() then
-					ToggleCloseUI(true);
+					Compkiller:ToggleCloseUI(true);
 
 					if WindowArgs.IsOpen then
 						Compkiller:_Animation(ImageLabel,TweenInfo.new(0.2),{
@@ -9876,9 +9876,9 @@ function Compkiller.new(Config : Window)
 					end;
 				else
 					if not WindowArgs.IsOpen then
-						ToggleCloseUI(true);
+						Compkiller:ToggleCloseUI(true);
 					else
-						ToggleCloseUI(false);
+						Compkiller:ToggleCloseUI(false);
 					end
 				end;
 			end
